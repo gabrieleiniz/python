@@ -1,0 +1,44 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container{
+    width: 700px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1,h2{
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button{
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.card{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.novo{
+    text-decoration: none;
+}
+
+.erro{
+    background: #ffdada;
+    padding: 10px;
+    margin-bottom: 10px;
+}

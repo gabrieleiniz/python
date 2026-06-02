@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h2>{{ titulo }}</h2>
+
+        {% if erro %}
+            <div class="erro">
+                {{ erro }}
+            </div>
+        {% endif %}
+
+        <form method="POST"
+              action="{% if aluno_id %}{{ url_for('editar', aluno_id=aluno_id) }}{% else %}{{ url_for('cadastrar') }}{% endif %}">
+
+            <label>Nome:</label>
+            <input type="text" name="nome" value="{{ nome or '' }}" required>
+
+            <label>E-mail:</label>
+            <input type="email" name="email" value="{{ email or '' }}" required>
+
+            <button type="submit">Salvar Dados</button>
+
+        </form>
+
+        <br>
+
+        <a href="{{ url_for('index') }}">Voltar</a>
+
+    </div>
+
+</body>
+</html>
